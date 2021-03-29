@@ -6,7 +6,7 @@ pipeline {
 
     stage('Checkout Source') {
       steps {
-        git url:'https://github.com/junhwani/JenkinsTest.git', branch:'main'
+        git url:'https://github.com/junhwani/JenkinsTest.git', branch:'master'
       }
     }
 
