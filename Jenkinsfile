@@ -12,10 +12,11 @@ pipeline {
 
     stage('Deploy App') {
       steps {
-        script {
-          kubernetesDeploy(configs: "prom.yaml", kubeconfigId: "mykubeconfig")
-          kubernetesDeploy(configs: "gra.yaml", kubeconfigId: "mykubeconfig")
-        }
+//         script {
+//           kubernetesDeploy(configs: "prom.yaml", kubeconfigId: "mykubeconfig")
+//           kubernetesDeploy(configs: "gra.yaml", kubeconfigId: "mykubeconfig")
+//         }
+        sh "kubectl apply -f prom.yaml"
       }
     }
 
