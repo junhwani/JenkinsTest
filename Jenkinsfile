@@ -12,5 +12,11 @@ pipeline {
       }
     }
 
+    stage('Deploy') {
+      steps {
+        sh 'kubectl --kubeconfig .kube/config apply -f prom.yaml'
+      }
+    }
+
   }
 }
